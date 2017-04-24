@@ -28,15 +28,19 @@
                                     <segment title="Newest"/>
                                     <segment title="Price"/>
                                     <segment title="Title"/>
+                                    <segment title="Type"/>
                                 </segments>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="segmentSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="7gT-sO-Xaa"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qOM-Hk-diO">
                                 <rect key="frame" x="16" y="132" width="288" height="436"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="150" id="0pa-cr-dAa" customClass="ItemCell" customModule="DreamLister" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="150" id="0pa-cr-dAa" customClass="ItemCell" customModule="DreamLister" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="288" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0pa-cr-dAa" id="c3S-K0-dkE">
@@ -170,6 +174,9 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gma-gr-icv">
                                 <rect key="frame" x="16" y="72" width="100" height="100"/>
+                                <connections>
+                                    <action selector="addImageButtonPressed:" destination="adT-Xh-kLY" eventType="touchUpInside" id="q5F-DM-nG4"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wM2-SL-fzg" customClass="CustomTextField" customModule="DreamLister" customModuleProvider="target">
                                 <rect key="frame" x="124" y="80" width="186" height="40"/>
@@ -261,12 +268,16 @@
                     <navigationItem key="navigationItem" title="Add/Edit" id="C0b-r5-gTv">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="54e-sN-5Ug">
                             <color key="tintColor" red="1" green="0.34305289630000002" blue="0.35540996289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="deleteButtonPressed:" destination="adT-Xh-kLY" id="qQ4-hh-4xv"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="detailsField" destination="9tf-oS-tey" id="Oem-8K-sr4"/>
                         <outlet property="priceField" destination="yQU-Ol-4Ce" id="XdR-6G-0et"/>
                         <outlet property="storePicker" destination="9Oh-eE-aal" id="qLM-yH-C7L"/>
+                        <outlet property="thumbImage" destination="hMx-k3-Zyj" id="5md-9v-R2f"/>
                         <outlet property="titleField" destination="wM2-SL-fzg" id="8Tm-Eo-8cV"/>
                     </connections>
                 </viewController>

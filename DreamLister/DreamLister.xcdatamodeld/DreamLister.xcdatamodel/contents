@@ -8,7 +8,7 @@
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
         <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="details" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="price" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="toImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Image" inverseName="toItem" inverseEntity="Image" syncable="YES"/>
         <relationship name="toItemType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ItemType" inverseName="toItem" inverseEntity="ItemType" syncable="YES"/>
@@ -25,7 +25,7 @@
     </entity>
     <elements>
         <element name="Image" positionX="279" positionY="56" width="128" height="88"/>
-        <element name="Item" positionX="574" positionY="-198" width="128" height="148"/>
+        <element name="Item" positionX="574" positionY="-198" width="128" height="150"/>
         <element name="ItemType" positionX="295" positionY="-225" width="128" height="73"/>
         <element name="Store" positionX="585" positionY="54" width="128" height="88"/>
     </elements>
